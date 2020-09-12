@@ -1,7 +1,11 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }) {
+// If you delete this component, Next.js will crush
+// This is like App.js of create-react-app
+// Global setting will be done in here.
+// You can use this component for error hundle HOC, redux provider and so on.
+function App({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default App
