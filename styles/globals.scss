@@ -1,3 +1,9 @@
+@use "variables";
+
+html {
+  font-size: 62.5%; // 1rem === 10px
+}
+
 html,
 body {
   padding: 0;
@@ -9,6 +15,28 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  top: 0;
+  position: fixed;
+  background-color: orangered;
+  width: 100%;
+  height: variables.$header-height;
+}
+
+main {
+  margin-left: variables.$nav-width;
+  padding: 20px;
+  background-color: blue;
+  width: 100%;
 }
 
 * {

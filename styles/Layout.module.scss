@@ -1,0 +1,16 @@
+@use 'variables';
+
+nav {
+  position: fixed;
+  left: 0;
+  width: variables.$nav-width;
+  height: 100%;
+  padding: 10px;
+  background-color: gray;
+}
+
+.wrap {
+  margin-top: variables.$header-height;
+  display: flex;
+  height: 100%;
+}
