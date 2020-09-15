@@ -3,7 +3,7 @@
 // Global setting will be done in here.
 // You can use this component for error hundle HOC, redux provider and so on.
 import '../styles/globals.scss'
-import Layout from "../components/organisms/Layout";
+import Layout from "../components/templates/Layout";
 
 function App({ Component, pageProps }) {
   return(

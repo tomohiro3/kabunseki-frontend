@@ -1,0 +1,27 @@
+
+{
+  // Configuration to enable svg import
+  "presets": [ "next/babel" ],
+  // This plugin imports svg as jsx component
+  // If you make one image as svg and import it directly, use this.
+  // "plugins": [ "inline-react-svg" ]
+  "plugins": [
+    [
+      // I tried to import svg file from /public and file-loader tried to produce output file to /public
+      // Then source and destination error occured.
+      // Hence moved sprite.svg to assets folder and import it from there.
+      // This  plugin read specified extension file as its extension file. Doesn't convert it to JSX Component.
+      "file-loader",      
+        {
+          // These  are default setting
+          // "name": "[hash].[ext]", // The file output file name
+          // "extensions": ["png", "jpg", "jpeg", "gif", "svg"],
+          // "publicPath": "/public", //Output file's prefix
+          "publicPath": "/"
+          // "outputPath": "/public",// Where to put the loaded file. In next.js /public equals root (/)
+          // "context": "",
+          // "limit": 0
+        }
+    ] 
+  ]
+}

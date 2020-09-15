@@ -19,7 +19,8 @@ a {
 
 ul,
 ol {
-  list-style: none;
+  padding-inline-start: 0 !important;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -38,6 +39,14 @@ main {
   background-color: blue;
   width: 100%;
 }
+
+// svg {
+//   position: absolute; 
+//   width: 24px; 
+//   height: 23px; 
+//   overflow: hidden;
+//   fill: gray;
+// }
 
 * {
   box-sizing: border-box;
