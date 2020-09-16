@@ -1,16 +1,13 @@
 @use 'variables';
 
-nav {
-  position: fixed;
-  left: 0;
-  width: variables.$nav-width;
-  height: 100%;
-  padding: 10px;
-  background-color: gray;
+nav ul li {
+  &:not(last-of-type) {
+    padding-bottom: 30px;
+  }
 }
 
 .wrap {
-  margin-top: variables.$header-height;
+  // margin-top: variables.$header-height;
   display: flex;
   height: 100%;
 }

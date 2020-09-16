@@ -1,47 +1,51 @@
 import React from "react";
 import Link from 'next/link'
 import styles from "../../styles/Layout.module.scss";
-import Icons from "../../assets/sprite.svg";
-
-import { List, ListItem } from "../atoms/List";
+import { List } from "../atoms/List";
+import { MediumIcon } from "../atoms/Icon";
 
 export default function Layout({children}) {
   // console.log((id) => Icons(id));
   return(
     <>
-      <header>
+      {/* <header>
         HEADER
-      </header>
+      </header> */}
       <div className={styles.wrap}>
         <nav>
           <List>
-            <ListItem>
+            <li>
               <Link href="/" as="/">
-                <a>TOP</a>
+                <a>
+                  <MediumIcon iconName="icon-home1" primary />
+                </a>
               </Link>
-            </ListItem>
-            <ListItem>
+            </li>
+            <li>
               <Link href="/search" as="/search">
-                <a>検索</a>
+                <a>
+                  <MediumIcon iconName="icon-search1" primary />
+                </a>
               </Link>
-            </ListItem>
-            <ListItem>
+            </li>
+            <li>
               <Link href="/mypage" as="/mypage">
-                <a>マイページ</a>
+                <a>
+                  <MediumIcon iconName="icon-user1" primary />
+                </a>
               </Link>
-            </ListItem>
-            <ListItem>
+            </li>
+            <li>
               <Link href="/bookmark" as="/bookmark">
-                <a>お気に入り</a>
+                <a>
+                  <MediumIcon iconName="icon-star1" primary />
+                </a>
               </Link>
-            </ListItem>
+            </li>
           </List>
         </nav>
         <main>
           MAIN CONTENT
-          <svg>
-            <use xlinkHref={`${Icons}#icon-user`} />
-          </svg>
           {children}
         </main>
       </div>

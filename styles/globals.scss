@@ -40,13 +40,14 @@ main {
   width: 100%;
 }
 
-// svg {
-//   position: absolute; 
-//   width: 24px; 
-//   height: 23px; 
-//   overflow: hidden;
-//   fill: gray;
-// }
+nav {
+  position: fixed;
+  left: 0;
+  width: variables.$nav-width;
+  height: 100%;
+  padding: 25px 10px;
+  background-color: #111a29;
+}
 
 * {
   box-sizing: border-box;
