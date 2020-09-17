@@ -12,8 +12,9 @@ export const Icon: React.FC<IconProps> = props => {
     </StyledSvg>
   )
 }
-export const MediumIcon: React.FC<IconProps> = props => <Icon size={42} fill={props.primary ? color.primary : props.fill} iconName={props.iconName} />;
+export const MediumIcon: React.FC<IconProps> = props => <Icon size={38} fill={props.primary ? color.primary : props.fill} iconName={props.iconName} />;
 
+// Might not need this ?
 const StyledSvg = styled.svg<SvgProps>`
   ${props => (props.fill ? "fill: props.fill" : undefined)}
 `

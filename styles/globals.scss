@@ -25,30 +25,22 @@ ol {
   padding: 0;
 }
 
-header {
-  top: 0;
-  position: fixed;
-  background-color: orangered;
-  width: 100%;
-  height: variables.$header-height;
-}
+// li {
+//   display: inline-block;
+// }
 
-main {
-  margin-left: variables.$nav-width;
-  padding: 20px;
-  background-color: blue;
-  width: 100%;
-}
-
-nav {
-  position: fixed;
-  left: 0;
-  width: variables.$nav-width;
-  height: 100%;
-  padding: 25px 10px;
-  background-color: #111a29;
+p {
+  font-size: 1.6rem;
 }
 
 * {
   box-sizing: border-box;
 }
+
+// header {
+//   top: 0;
+//   position: fixed;
+//   background-color: orangered;
+//   width: 100%;
+//   height: variables.$header-height;
+// }

@@ -5,13 +5,12 @@ import { List } from "../atoms/List";
 import { MediumIcon } from "../atoms/Icon";
 
 export default function Layout({children}) {
-  // console.log((id) => Icons(id));
   return(
     <>
       {/* <header>
         HEADER
       </header> */}
-      <div className={styles.wrap}>
+      <div className={styles.container}>
         <nav>
           <List>
             <li>
@@ -45,7 +44,6 @@ export default function Layout({children}) {
           </List>
         </nav>
         <main>
-          MAIN CONTENT
           {children}
         </main>
       </div>

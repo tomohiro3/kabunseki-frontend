@@ -1,13 +1,29 @@
 @use 'variables';
 
-nav ul li {
-  &:not(last-of-type) {
-    padding-bottom: 30px;
-  }
-}
-
-.wrap {
+.container {
   // margin-top: variables.$header-height;
   display: flex;
+}
+
+main {
+  min-height: 100vh;
+  margin-left: variables.$nav-width;
+  padding: 20px;
+  background-color: rgb(131, 131, 150);
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  width: variables.$nav-width;
   height: 100%;
+  padding: 25px 10px;
+  background-color: #111a29;
+}
+
+nav ul li {
+  &:not(last-of-type) {
+    padding-bottom: 24px;
+  }
 }
