@@ -1,13 +1,11 @@
 import React from "react";
 import styles from "../../styles/Search.module.scss";
 import { Button } from "../../components/atoms/Button";
-import { SearchBar } from "../../components/molecules/SearchBar";
 
 export default function Search() {
   return(
     <div className={styles.top}>
-      <Button><span>市場・業種</span></Button>
-      <SearchBar />
+      <Button>市場・業種</Button>
     </div>
       // <h1>市場</h1>
       // <p>東1</p>

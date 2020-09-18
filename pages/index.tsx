@@ -1,6 +1,7 @@
-import styles from '../styles/Home.module.scss'
+import Head from "next/head";
+import styles from '../styles/Top.module.scss'
 
-export default function Home() {
+export default function Top() {
 
   return(
     <>
