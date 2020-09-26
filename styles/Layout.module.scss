@@ -1,28 +1,28 @@
-@use 'variables';
+@use "variables" as *;
 
 .container {
   // margin-top: variables.$header-height;
   display: flex;
 }
 
-main {
+.main {
   min-height: 100vh;
-  margin-left: variables.$nav-width;
+  margin-left: $nav-width;
   padding: 25px 30px;
-  background-color: rgb(131, 131, 150);
+  // background-color: rgb(131, 131, 150);
   width: 100%;
 }
 
-nav {
+.nav {
   position: fixed;
   left: 0;
-  width: variables.$nav-width;
+  width: $nav-width;
   height: 100%;
   padding: 25px 10px;
   background-color: #111a29;
 }
 
-nav ul li {
+.nav ul li {
   &:not(last-of-type) {
     padding-bottom: 24px;
   }

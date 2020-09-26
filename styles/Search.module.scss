@@ -1,4 +1,12 @@
 .top {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.searchbar_wrapper {
+  width: 200px;
+  & > input {
+    width: 155px;
+  }
 }

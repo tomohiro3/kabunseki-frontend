@@ -1,0 +1,12 @@
+Organisms
+  It's a component having multiple atoms or molecules and it has its own meaning.
+  For example, SeacrhBar component in my project is organism.
+  The component is some atoms and molecules mixed component and it's desgined to be used as only search bar component in any pages.
+  If the component doesn't have the specific icon, seacrh icon, the component can be named as InputWithIcon and used as mail sender form submitter and so on.
+
+How to differenciate the usecase of styled component and (s)css.
+  I use styled component only for components in the components folder.
+    For atoms, Applying only the particular styles.
+    For molecules, TBD but could be same as the atoms.
+    For organisms, Applying some styles to tweak globally applied styles to meet the specifc organism components' requirement.
+  I use (s)css for global setting and page level of styles.

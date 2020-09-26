@@ -11,7 +11,7 @@ export default function Layout({children}) {
         HEADER
       </header> */}
       <div className={styles.container}>
-        <nav>
+        <nav className={styles.nav}>
           <List>
             <li>
               <Link href="/" as="/">
@@ -43,7 +43,7 @@ export default function Layout({children}) {
             </li>
           </List>
         </nav>
-        <main>
+        <main className={styles.main}>
           {children}
         </main>
       </div>

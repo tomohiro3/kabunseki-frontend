@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as *;
 
 html {
   font-size: 62.5%; // 1rem === 10px
@@ -34,11 +34,19 @@ p {
 }
 
 button {
+  display: inline-block;
+  padding: inherit;
   border: none;
+  font-family: inherit; // Need to inherit font-family or the font inside button will be default font.
   background-color: transparent;
-  font-family: inherit; // Need to inherit font-family or the font inside buttton will be default font.
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
   &:focus {
     outline: none;
   }
