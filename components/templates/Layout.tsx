@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link'
-import styles from "../../styles/Layout.module.scss";
+import styles from "../../styles/layout.module.scss";
 import { List } from "../atoms/List";
 import { MediumIcon } from "../atoms/Icon";
 
