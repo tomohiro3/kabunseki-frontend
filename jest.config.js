@@ -1,0 +1,39 @@
+module.exports = {
+  roots: [
+    '<rootDir>'
+  ],
+  testMatch: [
+    "**/__tests__/**/*.+(ts|tsx|js)",
+    "**/?(*.)+(spec|test).+(ts|tsx|js)"
+  ],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest'
+  },
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/', '<rootDir>/public/'],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  moduleFileExtensions: [
+    'ts',
+    'tsx',
+    'js',
+    'jsx',
+    'json',
+    'node'
+  ],
+  moduleNameMapper: {
+    // Hence Jest doesn't parser them below, need to map them.
+    "\\.scss$": "identity-obj-proxy",
+    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  // https://github.com/zeit/next.js/issues/8663#issue-490553899
+  globals: {
+    // we must specify a custom tsconfig for tests because we need the typescript transform
+    // to transform jsx into js rather than leaving it jsx such as the next build requires. you
+    // can see this setting in tsconfig.jest.json -> "jsx": "react"
+    'ts-jest': {
+      'tsConfig': '<rootDir>/test/tsconfig.jest.json'
+    }
+  }
+};
