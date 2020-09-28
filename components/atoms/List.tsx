@@ -6,8 +6,5 @@ import { ListProps } from "../../types/atoms";
 export const List: React.FC<ListProps> = props => <StyledList {...props} />
 
 const StyledList = styled.ul<ListProps>`
-  display: flex;
   flex-direction: ${props => props.row ? "row" : "column"};
-  justify-content: center;
-  align-items: center;
 `

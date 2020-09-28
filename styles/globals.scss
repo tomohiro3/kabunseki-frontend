@@ -17,10 +17,13 @@ a {
 
 ul,
 ol {
-  padding-inline-start: 0 !important;
-  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
+  padding-inline-start: 0 !important;
+  list-style-type: none;
 }
 
 // li {

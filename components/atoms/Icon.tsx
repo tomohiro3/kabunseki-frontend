@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { IconProps } from "../../types/atoms";
 import Icons from "../../assets/sprite.svg";
-import { color } from "../../constants/color";
+import { primary } from "../../constants/color";
 
 // Since svg element's viewBox actually doesn't give width and height to its self, need to wrap it with something that can have width and height.
 // You can give width and height attribute to svg element directly but it doesn't seem how it works
@@ -19,11 +19,11 @@ export const Icon: React.FC<IconProps> = props => {
       </StyledSpan>
   )
 }
-export const MediumIcon: React.FC<IconProps> = props => <Icon wh={38} fill={props.primary ? color.primary : props.fill} iconName={props.iconName} />;
-export const SmallIcon: React.FC<IconProps> = props => <Icon wh={14} fill={props.primary ? color.primary : props.fill} iconName={props.iconName} />;
+export const MediumIcon: React.FC<IconProps> = props => <Icon wh={38} fill={props.primary ? primary : props.fill} iconName={props.iconName} />;
+export const SmallIcon: React.FC<IconProps> = props => <Icon wh={14} fill={props.primary ? primary : props.fill} iconName={props.iconName} />;
 
 const StyledSpan = styled.span<IconProps>`
   display: inline-block;
-  width: ${props => props.wh}px;
-  height: ${props => props.wh}px;
+  width: ${props => props.wh ? `${props.wh}px` : undefined};
+  height: ${props => props.wh ? `${props.wh}px` : undefined};
 `

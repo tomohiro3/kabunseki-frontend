@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "../../styles/search.module.scss";
-import { BaseButton } from "../../components/atoms/Button";
+import { Button } from "../../components/atoms/Button";
 import { SearchBar } from "../../components/organisms/SearchBar";
 
 export default function Search() {
   return(
     <>
       <div className={styles.top}>
-        <BaseButton>市場・業種</BaseButton>
+        <Button bgColor="#e4e7ed">市場・業種</Button>
         <SearchBar className={styles.searchbar_wrapper} fill="primary" placeholder="銘柄コードか銘柄名を入力"
           onChange={() => console.log("Chnaged")}
           onClick={(e: any) => {
