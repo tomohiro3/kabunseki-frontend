@@ -8,7 +8,7 @@ export default function Search() {
     <>
       <div className={styles.top}>
         <BaseButton>市場・業種</BaseButton>
-        <SearchBar className={styles.searchbar_wrapper} fill="porange" placeholder="銘柄コードか銘柄名を入力"
+        <SearchBar className={styles.searchbar_wrapper} fill="primary" placeholder="銘柄コードか銘柄名を入力"
           onChange={() => console.log("Chnaged")}
           onClick={(e: any) => {
             e.preventDefault();
