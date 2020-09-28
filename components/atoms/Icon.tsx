@@ -5,20 +5,25 @@ import Icons from "../../assets/sprite.svg";
 import { color } from "../../constants/color";
 
 // Since svg element's viewBox actually doesn't give width and height to its self, need to wrap it with something that can have width and height.
+// You can give width and height attribute to svg element directly but it doesn't seem how it works
+// Hence I made in this way and The Icon component looks having some components
+// then you can think this is molecule but as mentioned above, wrapping span tag does no big deal and also svg element can't do anything by its self,
+// so I call this component as atom.
+// Or You can give fontSize attribute to svg instead
 export const Icon: React.FC<IconProps> = props => {
   return (
-      <StyledSpan size={props.size}>
-        <svg viewBox={`0 0 ${props.size} ${props.size}`} fill={props.fill} >
+      <StyledSpan wh={props.wh}>
+        <svg viewBox={`0 0 ${props.wh} ${props.wh}`} fill={props.fill} >
           <use xlinkHref={`${Icons}#${props.iconName}`} />
         </svg>
       </StyledSpan>
   )
 }
-export const MediumIcon: React.FC<IconProps> = props => <Icon size={38} fill={props.primary ? color.primary : props.fill} iconName={props.iconName} />;
-export const SmallIcon: React.FC<IconProps> = props => <Icon size={14} fill={props.primary ? color.primary : props.fill} iconName={props.iconName} />;
+export const MediumIcon: React.FC<IconProps> = props => <Icon wh={38} fill={props.primary ? color.primary : props.fill} iconName={props.iconName} />;
+export const SmallIcon: React.FC<IconProps> = props => <Icon wh={14} fill={props.primary ? color.primary : props.fill} iconName={props.iconName} />;
 
 const StyledSpan = styled.span<IconProps>`
   display: inline-block;
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
+  width: ${props => props.wh}px;
+  height: ${props => props.wh}px;
 `
