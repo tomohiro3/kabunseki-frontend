@@ -11,6 +11,11 @@
   padding: 25px 30px;
   // background-color: rgb(131, 131, 150);
   width: 100%;
+  
+  @media only screen and (max-width: $mobile) {
+    margin-left: 0;
+    min-height: calc( 100vh - #{$nav-width-sp} );
+  }
 }
 
 .nav {
@@ -29,10 +34,10 @@
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: $mobile) {
     bottom: 0;
     width: 100%;
-    height: $nav-width;
+    height: $nav-width-sp;
     padding: 0 10px;
     
     & ul {

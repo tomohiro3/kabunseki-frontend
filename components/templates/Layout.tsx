@@ -36,7 +36,7 @@ export default function Layout({children}) {
             </li>
             <li>
               <Link href="/bookmark" as="/bookmark">
-                <a aria-label="お気に入りページに移る">
+                <a aria-label="検索ページに移る">
                   <MediumIcon role="button" iconName="icon-star1" primary />
                 </a>
               </Link>

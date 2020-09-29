@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { IconProps } from "../../types/atoms";
 import Icons from "../../assets/sprite.svg";
 import { primary } from "../../constants/color";
+import { mobile } from "../../constants/length";
 
 // Since svg element's viewBox actually doesn't give width and height to its self, need to wrap it with something that can have width and height.
 // You can give width and height attribute to svg element directly but it doesn't seem how it works
@@ -13,17 +14,22 @@ import { primary } from "../../constants/color";
 export const Icon: React.FC<IconProps> = props => {
   return (
       <StyledSpan wh={props.wh}>
-        <svg role={props.role} viewBox={`0 0 ${props.wh} ${props.wh}`} fill={props.fill} >
+        <svg role={props.role} viewBox="0 0 24 24" fill={props.primary ? primary : props.fill} >
           <use xlinkHref={`${Icons}#${props.iconName}`} />
         </svg>
       </StyledSpan>
   )
 }
-export const MediumIcon: React.FC<IconProps> = props => <Icon wh={38} fill={props.primary ? primary : props.fill} {...props} />;
-export const SmallIcon: React.FC<IconProps> = props => <Icon wh={14} fill={props.primary ? primary : props.fill} {...props} />;
+export const MediumIcon: React.FC<IconProps> = props => <Icon wh="m" fill={props.primary ? primary : props.fill} {...props} />;
+export const SmallIcon: React.FC<IconProps> = props => <Icon wh="s" fill={props.primary ? primary : props.fill} {...props} />;
 
 const StyledSpan = styled.span<IconProps>`
   display: inline-block;
-  width: ${props => props.wh ? `${props.wh}px` : undefined};
-  height: ${props => props.wh ? `${props.wh}px` : undefined};
+  width: ${props => props.wh == "m" ? "38px" : props.wh == "s" ? "14px" : undefined};
+  height: ${props => props.wh == "m" ? "38px" : props.wh == "s" ? "14px" : undefined};
+  
+  @media only screen and (max-width: ${mobile}) {
+    width: ${props => props.wh == "m" ? "24px" : props.wh == "s" ? "14px" : undefined};
+    height: ${props => props.wh == "m" ? "24px" : props.wh == "s" ? "14px" : undefined};
+  }
 `

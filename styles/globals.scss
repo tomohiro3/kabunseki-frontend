@@ -36,8 +36,7 @@ p {
 
 button {
   display: inline-block;
-  padding: inherit;
-  margin: inherit;
+  padding: 0;
   border: none;
   font-family: inherit; // Need to inherit font-family or the font inside button will be default font.
   background-color: transparent;

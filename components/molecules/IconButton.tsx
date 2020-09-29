@@ -1,15 +1,20 @@
 import React from 'react';
-import { Button } from '../atoms/Button';
-import { SmallIcon } from '../atoms/Icon';
+import { BaseButton } from '../atoms/Button';
+import { SmallIcon, MediumIcon } from '../atoms/Icon';
 import { IconButtonProps } from "../../types/molecules";
 
-
-const IconButton: React.FC<IconButtonProps> = (props) => {
+export const SmallIconButton: React.FC<IconButtonProps> = (props) => {
   return (
-    <Button onClick={props.onClick}>
+    <BaseButton onClick={props.onClick}>
       <SmallIcon { ...props }/>
-    </Button>
+    </BaseButton>
   );
 };
 
-export default IconButton;
+export const MediumIconButton: React.FC<IconButtonProps> = (props) => {
+  return (
+    <BaseButton onClick={props.onClick}>
+      <MediumIcon { ...props }/>
+    </BaseButton>
+  );
+};
