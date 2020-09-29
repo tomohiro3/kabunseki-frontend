@@ -1,11 +1,12 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { screen, render } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import Search from '../pages/search';
 
-describe('Sample.jsx', () => {
-  test('show h1', () => {
-    const wrapper = shallow(<Search />);
-    console.log(wrapper.debug());
+describe('Test', () => {
+  test('test', () => {
+    render(<Search />);
+    screen.debug();
+    expect(screen.getByText("市場・業種"));
   })
-
 })

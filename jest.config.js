@@ -9,10 +9,9 @@ module.exports = {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/', '<rootDir>/public/'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
   moduleFileExtensions: [
     'ts',
     'tsx',
