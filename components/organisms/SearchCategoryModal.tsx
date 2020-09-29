@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { Modal, ModalContent } from "../atoms/Modal";
+import { Modal, ModalContentBase } from "../molecules/Modal";
 import { MediumIconButton } from "../molecules/IconButton";
-import { SearchCategoryModalProps } from "../../types/organisms";
+import { ModalProps } from "../../types/molecules";
 
-export const SearchCategoryModal: React.FC<SearchCategoryModalProps> = props => {
+export const SearchCategoryModal: React.FC<ModalProps> = props => {
   return (
-    <Modal open={props.open}>
+    <Modal {...props} >
       <ModalContent>
-        <ModalButtonWrapper>
-          <MediumIconButton iconName="icon-times" onClick={props.onClick} />
-        </ModalButtonWrapper>
+        <StyledTimesButtonWrapper>
+          <MediumIconButton iconName="icon-times" id={props.buttonId} onClick={props.onClick} />
+        </StyledTimesButtonWrapper>
         <div>
           TEST
         </div>
@@ -19,9 +19,13 @@ export const SearchCategoryModal: React.FC<SearchCategoryModalProps> = props => 
   )
 }
 
-const ModalButtonWrapper = styled.div`
+const StyledTimesButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+`
+const ModalContent = styled(ModalContentBase)`
+  width: 500px;
+  height: 700px;
 `

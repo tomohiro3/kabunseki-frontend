@@ -18,7 +18,7 @@ export default function Search() {
           }}
         />
       </div>
-      <SearchCategoryModal onClick={() => setModalOpen(!modalOpen)} open={modalOpen} />
+      <SearchCategoryModal id="search-modal" buttonId="search-modal-close" onClick={() => setModalOpen(!modalOpen)} open={modalOpen} />
     </>
       // <h1>市場</h1>
       // <p>東1</p>
