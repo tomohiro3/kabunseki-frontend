@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ModalProps } from "../../types/atoms";
 import { mobile, navWidth } from "../../constants/length";
 
-export const Modal: React.FC<ModalProps> = props => props.open ? <StyledModal {...props} /> : null;
+export const Modal: React.FC<ModalProps> = props => props.open ? <StyledModal role="presentation" {...props} /> : null;
 export const ModalContent: React.FC = props => <StyledModalContent {...props} />;
 
 const StyledModal = styled.div`
@@ -13,13 +13,9 @@ const StyledModal = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  color: white;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
-
-  @media only screen and (max-width: ${mobile}) {
-      overflow: auto;
-  }
+  overflow: auto;
 `
 const StyledModalContent = styled.div`
   position: absolute;

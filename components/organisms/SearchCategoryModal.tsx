@@ -8,8 +8,20 @@ export const SearchCategoryModal: React.FC<SearchCategoryModalProps> = ({ open, 
   return (
     <Modal open={open}>
       <ModalContent>
-        <MediumIconButton iconName="icon-times" onClick={onClick} />
+        <ModalButtonWrapper>
+          <MediumIconButton iconName="icon-times" onClick={onClick} />
+        </ModalButtonWrapper>
+        <div>
+          TEST
+        </div>
       </ModalContent>
     </Modal>
   )
 }
+
+const ModalButtonWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+`

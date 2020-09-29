@@ -9,7 +9,7 @@ export default function Search() {
   return(
     <>
       <div className={styles.top}>
-        <Button aria-label="Open category select modal" bgColor="#e4e7ed" onClick={() => setModalOpen(!modalOpen)}>市場・業種</Button>
+        <Button aria-label="Open a modal to select search options" bgColor="#e4e7ed" onClick={() => setModalOpen(!modalOpen)}>市場・業種</Button>
         <SearchBar id="top-search-input" buttonId="top-search-button" className={styles.searchbar_wrapper} fill="primary" placeholder="銘柄コードか銘柄名を入力"
           onChange={() => console.log("Chnaged")}
           onClick={(e: any) => {
