@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../styles/search.module.scss";
 import { Button } from "../../components/atoms/Button";
+import { SearchCategoryModal } from "../../components/organisms/SearchCategoryModal";
 import { SearchBar } from "../../components/organisms/SearchBar";
 
 export default function Search() {
@@ -17,6 +18,7 @@ export default function Search() {
           }}
         />
       </div>
+      <SearchCategoryModal onClick={() => setModalOpen(!modalOpen)} open={modalOpen} />
     </>
       // <h1>市場</h1>
       // <p>東1</p>

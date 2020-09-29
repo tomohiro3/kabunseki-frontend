@@ -7,3 +7,4 @@ export type IconProps = SvgProps & { iconName?: string, wh?: number, primary?: b
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLElement> & { bgColor ?: string, r ?: number, hasShadow?: boolean, primary ?: boolean, buttonId ?: string, };
 // Need to inherit the type below, otherwise type property won't work
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
+export type ModalProps = { open: boolean };
