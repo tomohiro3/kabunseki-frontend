@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/search.module.scss";
 import { Button } from "../../components/atoms/Button";
 import { SearchBar } from "../../components/organisms/SearchBar";
 
 export default function Search() {
+  const [modalOpen, setModalOpen] = useState(false);
   return(
     <>
       <div className={styles.top}>
-        <Button bgColor="#e4e7ed">市場・業種</Button>
-        <SearchBar className={styles.searchbar_wrapper} fill="primary" placeholder="銘柄コードか銘柄名を入力"
+        <Button bgColor="#e4e7ed" onClick={() => setModalOpen(!modalOpen)}>市場・業種</Button>
+        <SearchBar id="top-search-input" buttonId="top-search-button" className={styles.searchbar_wrapper} fill="primary" placeholder="銘柄コードか銘柄名を入力"
           onChange={() => console.log("Chnaged")}
           onClick={(e: any) => {
             e.preventDefault();

@@ -10,9 +10,9 @@ import { SearchBarProps } from "../../types/organisms";
 export const SearchBar: React.FC<SearchBarProps> = (props) => {
   return (
     <SearchBarWrapper className={props.className}>
-      <SearchBarInput type="text" value={props.value} placeholder={props.placeholder} onChange={props.onChange} />
-      <SearchBarButton type="submit" onClick={props.onClick} >
-        <SmallIcon iconName="icon-search1" { ...props }/>
+      <SearchBarInput id={props.id} type="text" value={props.value} placeholder={props.placeholder} onChange={props.onChange} />
+      <SearchBarButton aria-label="銘柄を検索する" id={props.buttonId} type="submit" onClick={props.onClick} >
+        <SmallIcon role="button" iconName="icon-search1" { ...props }/>
       </SearchBarButton>
     </SearchBarWrapper>
   );

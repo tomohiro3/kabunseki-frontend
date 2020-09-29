@@ -13,14 +13,14 @@ import { primary } from "../../constants/color";
 export const Icon: React.FC<IconProps> = props => {
   return (
       <StyledSpan wh={props.wh}>
-        <svg viewBox={`0 0 ${props.wh} ${props.wh}`} fill={props.fill} >
+        <svg role={props.role} viewBox={`0 0 ${props.wh} ${props.wh}`} fill={props.fill} >
           <use xlinkHref={`${Icons}#${props.iconName}`} />
         </svg>
       </StyledSpan>
   )
 }
-export const MediumIcon: React.FC<IconProps> = props => <Icon wh={38} fill={props.primary ? primary : props.fill} iconName={props.iconName} />;
-export const SmallIcon: React.FC<IconProps> = props => <Icon wh={14} fill={props.primary ? primary : props.fill} iconName={props.iconName} />;
+export const MediumIcon: React.FC<IconProps> = props => <Icon wh={38} fill={props.primary ? primary : props.fill} {...props} />;
+export const SmallIcon: React.FC<IconProps> = props => <Icon wh={14} fill={props.primary ? primary : props.fill} {...props} />;
 
 const StyledSpan = styled.span<IconProps>`
   display: inline-block;
