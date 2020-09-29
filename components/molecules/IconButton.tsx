@@ -6,7 +6,7 @@ import { IconButtonProps } from "../../types/molecules";
 export const SmallIconButton: React.FC<IconButtonProps> = (props) => {
   return (
     <BaseButton onClick={props.onClick}>
-      <SmallIcon { ...props }/>
+      <SmallIcon role="button" { ...props }/>
     </BaseButton>
   );
 };
@@ -14,7 +14,7 @@ export const SmallIconButton: React.FC<IconButtonProps> = (props) => {
 export const MediumIconButton: React.FC<IconButtonProps> = (props) => {
   return (
     <BaseButton onClick={props.onClick}>
-      <MediumIcon { ...props }/>
+      <MediumIcon role="button" { ...props }/>
     </BaseButton>
   );
 };

@@ -4,12 +4,12 @@ import { Modal, ModalContent } from "../atoms/Modal";
 import { MediumIconButton } from "../molecules/IconButton";
 import { SearchCategoryModalProps } from "../../types/organisms";
 
-export const SearchCategoryModal: React.FC<SearchCategoryModalProps> = ({ open, onClick }) => {
+export const SearchCategoryModal: React.FC<SearchCategoryModalProps> = props => {
   return (
-    <Modal open={open}>
+    <Modal open={props.open}>
       <ModalContent>
         <ModalButtonWrapper>
-          <MediumIconButton iconName="icon-times" onClick={onClick} />
+          <MediumIconButton iconName="icon-times" onClick={props.onClick} />
         </ModalButtonWrapper>
         <div>
           TEST
