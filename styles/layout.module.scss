@@ -20,10 +20,28 @@
   height: 100%;
   padding: 25px 10px;
   background-color: #111a29;
-}
 
-.nav ul li {
-  &:not(last-of-type) {
-    padding-bottom: 24px;
+  & ul {
+    & li {
+      &:not(last-of-type) {
+        padding-bottom: 24px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    bottom: 0;
+    width: 100%;
+    height: $nav-width;
+    padding: 0 10px;
+    
+    & ul {
+      justify-content: space-around;
+      height: 100%;
+      flex-direction: row;
+      & li {
+        padding: 0 !important;
+      }
+    }
   }
 }
