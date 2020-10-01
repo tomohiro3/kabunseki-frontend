@@ -2,18 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import { Modal, ModalContentBase } from "../molecules/Modal";
 import { MediumIconButton } from "../molecules/IconButton";
-import { ModalProps } from "../../types/molecules";
+import { SearchCategoryModalProps } from "../../types/organisms"
 
-export const SearchCategoryModal: React.FC<ModalProps> = props => {
+export const SearchCategoryModal: React.FC<SearchCategoryModalProps> = props => {
   return (
     <Modal {...props} >
       <ModalContent>
         <StyledTimesButtonWrapper>
           <MediumIconButton iconName="icon-times" id={props.buttonId} onClick={props.onClick} />
         </StyledTimesButtonWrapper>
-        <div>
-          TEST
-        </div>
+        <StyledCategoryTableWrapper>
+          <table>
+            <thead>
+              <tr>
+                <th>col1</th>
+                <th>col2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data1</td>
+                <td>data2</td>
+              </tr>
+            </tbody>
+          </table>
+        </StyledCategoryTableWrapper>
       </ModalContent>
     </Modal>
   )
@@ -26,6 +39,12 @@ const StyledTimesButtonWrapper = styled.div`
   width: 100%;
 `
 const ModalContent = styled(ModalContentBase)`
-  width: 500px;
+  width: 650px;
   height: 700px;
+`
+
+const StyledCategoryTableWrapper = styled.div`
+  height: 100%;
+  margin: 5px 48px 39px 48px;
+  background-color: red;
 `

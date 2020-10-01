@@ -22,7 +22,6 @@ const StyledModal = styled.div`
   height: 100%;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
-  overflow: auto;
 `
 const StyledModalBackdrop = styled.div`
   position: fixed;
@@ -38,10 +37,15 @@ const StyledModalContent = styled.div`
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   background-color: #fefefe;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   max-width: 80%;
   max-height: 85%;
+  overflow: auto;
+  --ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   
   @media only screen and (max-width: ${mobile}) {
     /* top: 30%;
