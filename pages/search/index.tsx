@@ -1,31 +1,37 @@
-import React, { useState } from "react";
-import styles from "../../styles/search.module.scss";
-import { Button } from "../../components/atoms/Button";
-import { SearchCategoryModal } from "../../components/organisms/SearchCategoryModal";
-import { SearchBar } from "../../components/organisms/SearchBar";
+import React, { ReactElement, useState } from 'react';
+import styles from '../../styles/search.module.scss';
+import { Button } from '../../components/atoms/Button';
+import { SearchCategoryModal } from '../../components/organisms/SearchCategoryModal';
+import { SearchBar } from '../../components/organisms/SearchBar';
 
-export default function Search() {
+export default function Search(): ReactElement {
   const [modalOpen, setModalOpen] = useState(false);
-  return(
+  return (
     <>
       <div className={styles.top}>
-        <Button aria-label="Open a modal to select search options" bgColor="#e4e7ed" onClick={() => setModalOpen(!modalOpen)}>市場・業種</Button>
-        <SearchBar id="top-search-input" buttonId="top-search-button" className={styles.searchbar_wrapper} fill="primary" placeholder="銘柄コードか銘柄名を入力"
-          onChange={() => console.log("Chnaged")}
+        <Button aria-label="Open a modal to select search options" bgColor="#e4e7ed" onClick={() => setModalOpen(!modalOpen)}>
+          市場・業種
+        </Button>
+        <SearchBar
+          className={styles.searchbar_wrapper}
+          fill="primary"
+          placeholder="銘柄コードか銘柄名を入力"
+          onChange={() => console.log('Chnaged')}
           onClick={(e: any) => {
             e.preventDefault();
-            console.log("Clicked");
+            console.log('Clicked');
           }}
         />
       </div>
-      <SearchCategoryModal id="search-modal" buttonId="search-modal-close" onClick={() => setModalOpen(!modalOpen)} open={modalOpen} />
+
+      <SearchCategoryModal id="search-modal" onClick={() => setModalOpen(!modalOpen)} open={modalOpen} />
     </>
-      // <h1>市場</h1>
-      // <p>東1</p>
-      // <p>東2</p>
-      // <p>東マ</p>
-      // <p>JQ</p>
-      /* <h1>17業種</h1>
+    // <h1>市場</h1>
+    // <p>東1</p>
+    // <p>東2</p>
+    // <p>東マ</p>
+    // <p>JQ</p>
+    /* <h1>17業種</h1>
       <p>食品</p>
       <p>エネルギー資源</p>
       <p>建設・資材</p>
@@ -78,8 +84,5 @@ export default function Search() {
     //   <p>サービス業</p>
     //   <p>情報・通信業</p>
     // </div>
-  )
-
-};
-
-
+  );
+}

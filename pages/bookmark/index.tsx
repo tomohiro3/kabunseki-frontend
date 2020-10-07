@@ -1,18 +1,18 @@
-import React from "react";
-import styles from "../../styles/Search.module.scss";
-import { Button } from "../../components/atoms/Button";
+import React from 'react';
+import styles from '../../styles/Search.module.scss';
+import { Button } from '../../components/atoms/Button';
 
 export default function Search() {
-  return(
+  return (
     <div className={styles.top}>
       <Button>市場・業種</Button>
     </div>
-      // <h1>市場</h1>
-      // <p>東1</p>
-      // <p>東2</p>
-      // <p>東マ</p>
-      // <p>JQ</p>
-      /* <h1>17業種</h1>
+    // <h1>市場</h1>
+    // <p>東1</p>
+    // <p>東2</p>
+    // <p>東マ</p>
+    // <p>JQ</p>
+    /* <h1>17業種</h1>
       <p>食品</p>
       <p>エネルギー資源</p>
       <p>建設・資材</p>
@@ -65,8 +65,5 @@ export default function Search() {
     //   <p>サービス業</p>
     //   <p>情報・通信業</p>
     // </div>
-  )
-
-};
-
-
+  );
+}

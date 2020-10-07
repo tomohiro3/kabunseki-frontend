@@ -1,4 +1,4 @@
-import { IconProps, ButtonProps } from "../atoms";
+import { IconProps, ButtonProps } from '../atoms';
 
 export type IconButtonProps = IconProps & ButtonProps;
-export type ModalProps = IconButtonProps & { open: boolean, };
+export type ModalProps = IconButtonProps & { open: boolean };

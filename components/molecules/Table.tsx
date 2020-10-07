@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const Table: React.FC = props => <table></table>;
-const TableHead: React.FC = props => <thead></thead>;
-const TableBody: React.FC = props => <tbody></tbody>;
-const TableRow: React.FC = props => <tr></tr>;
-const TableColumn: React.FC = props => <th></th>;
-const TableCell: React.FC = props => <td></td>;
+export const Table: React.FC = (props) => <table></table>;
+export const TableHead: React.FC = (props) => <thead></thead>;
+export const TableBody: React.FC = (props) => <tbody></tbody>;
+export const TableRow: React.FC = (props) => <tr></tr>;
+export const TableColumn: React.FC = (props) => <th></th>;
+export const TableCell: React.FC = (props) => <td></td>;

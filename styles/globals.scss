@@ -1,3 +1,5 @@
+@use "variables" as *;
+ 
 html {
   font-size: 62.5%; // 1rem === 10px
 }
@@ -60,7 +62,44 @@ input {
 
 table {
   width: 100%;
+  // border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: $box-shadow;
+  // border: 1px solid grey;
+  // border-collapse: collapse;
+  border-spacing: 0;
 }
+
+// th, td {
+//   border: 1px solid grey;
+//   border-collapse: collapse;
+  
+// }
+// Need to adjust width of border
+// tbody {
+//   & tr:not(:last-child) {
+//     & td {
+//       border-bottom: 2px solid rgba(224, 224, 224, 1);
+//     }
+//   }
+// }
+
+// th {
+//   border-bottom: 2px solid rgba(224, 224, 224, 1);
+//   &:last-of-type {
+//     border-right: 2px solid transparent;
+//   }
+//   &:not(:last-of-type) {
+//     border-right: 2px solid rgba(224, 224, 224, 1);
+//   }
+// }
+
+// td {
+//   &:not(:last-of-type) {
+//     border-right: 2px solid rgba(224, 224, 224, 1);
+//   }
+// }
+
+
 
 // header {
 //   top: 0;

@@ -2,7 +2,7 @@
 // Typescript cannot understand what svg file is
 // Hence made a declaration file for svg extension
 // declare module "*.svg"
-declare module "*.svg" {
+declare module '*.svg' {
   const content: any;
   export default content;
 }
