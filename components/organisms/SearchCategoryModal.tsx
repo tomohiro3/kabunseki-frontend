@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Typography } from '../atoms/Typography';
 import { Modal, ModalContentBase } from '../molecules/Modal';
 import { MediumIconButton } from '../molecules/IconButton';
 import { SearchCategoryModalProps } from '../../types/organisms';
 import { boxShadow } from '../../constants/shadow';
+import { mobile } from '../../constants/length';
 
 const industries = {
   industry33: [
@@ -69,24 +71,41 @@ export const SearchCategoryModal: React.FC<SearchCategoryModalProps> = (props) =
         <StyledTimesButtonWrapper>
           <MediumIconButton iconName="icon-times" id="searchmodal-close" onClick={props.onClick} />
         </StyledTimesButtonWrapper>
-        <StyledCategoryContentWrapper>
-          <div className="i17">
-            <b>17業種</b>
-          </div>
-          <div className="i33">
-            <b>33業種</b>
-          </div>
-          {industries.industry17.map((el) => (
-            <div className={el.className} key={el.division + el.id}>
-              {el.division}
+        <StyledSearchCategoryWrapper>
+          <StyledMarketsWrapper>
+            <div>
+              <Typography h2>市場</Typography>
             </div>
-          ))}
-          {industries.industry33.map((el) => (
-            <div className={el.className} key={el.division + el.id}>
-              {el.division}
-            </div>
-          ))}
-        </StyledCategoryContentWrapper>
+            <StyledMarketsOptionsWrapper>
+              <div>東1</div>
+              <div>東2</div>
+              <div>東マ</div>
+              <div>JQ</div>
+            </StyledMarketsOptionsWrapper>
+          </StyledMarketsWrapper>
+          <StyledIndustriesWrapper>
+            <StyledIndustiesTitleWrapper>
+              <div>
+                <Typography h2>17業種</Typography>
+              </div>
+              <div>
+                <Typography h2>33業種</Typography>
+              </div>
+            </StyledIndustiesTitleWrapper>
+            <StyledIndustriesOptionsWrapper>
+              {industries.industry17.map((el) => (
+                <div className={el.className} key={el.division + el.id}>
+                  {el.division}
+                </div>
+              ))}
+              {industries.industry33.map((el) => (
+                <div className={el.className} key={el.division + el.id}>
+                  {el.division}
+                </div>
+              ))}
+            </StyledIndustriesOptionsWrapper>
+          </StyledIndustriesWrapper>
+        </StyledSearchCategoryWrapper>
       </ModalContent>
     </Modal>
   );
@@ -103,12 +122,47 @@ const ModalContent = styled(ModalContentBase)`
   height: 700px;
 `;
 
-const StyledCategoryContentWrapper = styled.div`
+const StyledSearchCategoryWrapper = styled.div`
+  margin: 5px 48px 39px 48px;
+  @media screen and (max-width: ${mobile}) {
+    margin: 5px 28px 39px 28px;
+  }
+`;
+
+const StyledMarketsWrapper = styled.div`
+  width: 60%;
+  margin: 0 auto 16px auto;
+`;
+
+const StyledMarketsOptionsWrapper = styled.div`
+  display: flex;
+  & div {
+    width: 100px;
+    border: 1px solid grey;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+`;
+
+const StyledIndustriesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledIndustiesTitleWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  & div {
+    width: 100%;
+    text-align: center;
+  }
+`;
+
+const StyledIndustriesOptionsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    'i17 i33'
     'i17id1 i33id1'
     'i17id1 i33id2'
     'i17id2 i33id3'
@@ -142,7 +196,6 @@ const StyledCategoryContentWrapper = styled.div`
     'i17id16 i33id31'
     'i17id16 i33id32'
     'i17id17 i33id33';
-  margin: 5px 48px 39px 48px;
   box-shadow: ${boxShadow};
   & div {
     display: flex;
@@ -302,5 +355,4 @@ const StyledCategoryContentWrapper = styled.div`
   & .i17id17 {
     grid-area: i17id17;
   }
-  /* background-color: gray; */
 `;

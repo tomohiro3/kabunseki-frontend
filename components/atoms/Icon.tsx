@@ -28,7 +28,7 @@ const StyledSpan = styled.span<IconProps>`
   width: ${(props) => (props.wh == 'm' ? '38px' : props.wh == 's' ? '14px' : undefined)};
   height: ${(props) => (props.wh == 'm' ? '38px' : props.wh == 's' ? '14px' : undefined)};
 
-  @media only screen and (max-width: ${mobile}) {
+  @media screen and (max-width: ${mobile}) {
     width: ${(props) => (props.wh == 'm' ? '24px' : props.wh == 's' ? '14px' : undefined)};
     height: ${(props) => (props.wh == 'm' ? '24px' : props.wh == 's' ? '14px' : undefined)};
   }

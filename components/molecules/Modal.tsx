@@ -5,7 +5,7 @@ import { mobile } from '../../constants/length';
 
 export const Modal: React.FC<ModalProps> = (props) =>
   props.open ? (
-    <StyledModal role="presentation" id={props.id}>
+    <StyledModal tabIndex={-1} role="presentation" id={props.id}>
       <ModalBackDrop onClick={props.onClick} />
       {props.children}
     </StyledModal>
@@ -47,7 +47,7 @@ const StyledModalContent = styled.div`
     display: none;
   }
 
-  @media only screen and (max-width: ${mobile}) {
+  @media screen and (max-width: ${mobile}) {
     /* top: 30%;
     transform: translateX(-50%) translateY(-30%); */
     padding: 10px;
